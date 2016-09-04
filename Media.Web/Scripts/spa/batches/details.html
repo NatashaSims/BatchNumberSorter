@@ -1,0 +1,72 @@
+﻿<hr />
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h5>Details</h5>
+            </div>
+            <div class="panel-body" ng-if="!loadingBatch">
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">{{batch.BatchNumbers}}</h4>
+                        Number of Runs: <strong>{{batch.NumberOfRuns}}</strong>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div ng-if="loadingBatch">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Loading batch data...</label>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="openRunDialog();">Create Run</button>
+
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-danger shortPanel">
+            <div class="panel-heading clearfix">
+                <h5 class="pull-left">Runs</h5>
+                <div class="input-group">
+                    <input id="inputSearchRuns" type="search" ng-model="filterRuns" class="form-control shortInputSearch" placeholder="Filter..">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" ng-click="clearSearch();"><i class="glyphicon glyphicon-remove-sign"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive" ng-if="!loadingRuns">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Batch</th>
+                            <th>Sequence</th>
+                            <th>Direction</th>
+                            <th>Time Taken (Ticks)</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="run in runHistory | filter:filterRuns">
+                            <td>{{run.ID}}</td>
+                            <td>{{run.Batch}}</td>
+                            <td>{{run.Sequence}}</td>
+                            <td>{{run.Direction}}</td>
+                            <td>{{run.TimeTaken}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div ng-if="loadingRuns">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <i class="fa fa-refresh fa-4x fa-spin"></i> <label class="label label-primary">Loading run history...</label>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+        </div>
+    </div>
+</div>

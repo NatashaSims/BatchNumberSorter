@@ -1,0 +1,57 @@
+﻿<hr /> <div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-primary" id="panelLatestRuns">
+            <div class="panel-heading">
+                <h4 class="panel-title">Latest Runs</h4>
+            </div>
+            <div class="panel-body">
+                <div ng-if="loadingRuns">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i>
+                        <label class="label label-primary">Loading runs...</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div class="col-xs-12 col-sm-6 run" ng-repeat="run in Runs">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <strong>Ordered Sequence: {{run.Sequence}} </strong>
+                        </div>
+                        <div class="panel-body">
+                            <div class="media">
+                                <div class="media-body">
+                                    <div><small>Direction: {{run.Direction | limitTo: 70}}</small></div>
+                                    <div><small>Time Taken: {{run.TimeTaken | limitTo: 70}}</small></div>
+                                    <div><small>Batch: {{run.Batch | limitTo: 70}}</small></div>
+                                    <label class="label labelinfo">{{run.Batch}}</label><br />
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="panel panel-success" id="panelRunBatches">
+            <div class="panel-heading">
+                <h4 class="panel-title">Runs Batches</h4>
+            </div>
+            <div class="panel-body">
+                <div ng-if="loadingBatches">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                        <i class="fa fa-refresh fa-5x fa-spin"></i>
+                        <label class="label label-primary">Loading Batches..</label>
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div id="batches-bar"></div>
+            </div>
+        </div>
+    </div>
+</div>

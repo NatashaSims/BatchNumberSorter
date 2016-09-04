@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Entities", "Media.Entities\Media.Entities.csproj", "{4CD36461-062C-42A5-9518-A7DA745297C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Data", "Media.Data\Media.Data.csproj", "{0333FBCB-EB8F-4538-BE15-85DB522908DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Web", "Media.Web\Media.Web.csproj", "{4A4DA2D2-FF27-4D3F-B85C-6CA9B4E366F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4CD36461-062C-42A5-9518-A7DA745297C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CD36461-062C-42A5-9518-A7DA745297C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CD36461-062C-42A5-9518-A7DA745297C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CD36461-062C-42A5-9518-A7DA745297C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0333FBCB-EB8F-4538-BE15-85DB522908DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0333FBCB-EB8F-4538-BE15-85DB522908DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0333FBCB-EB8F-4538-BE15-85DB522908DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0333FBCB-EB8F-4538-BE15-85DB522908DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A4DA2D2-FF27-4D3F-B85C-6CA9B4E366F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A4DA2D2-FF27-4D3F-B85C-6CA9B4E366F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A4DA2D2-FF27-4D3F-B85C-6CA9B4E366F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A4DA2D2-FF27-4D3F-B85C-6CA9B4E366F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

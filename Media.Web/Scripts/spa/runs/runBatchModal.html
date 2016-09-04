@@ -1,0 +1,20 @@
+﻿
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Create Run for {{batch.BatchNumbers}}
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <div class="col-xs-8 selectContainer">
+                    <label class="control-label">Direction</label>
+                    <select ng-model="selectedDirection" class="form-control black" ng-options="item for item in directionItems" required></select>
+                </div>
+            </div>
+            <div class="form-group col-xs-8">
+                <button type="button" class="btn btn-danger" ng-click="cancelRun()">Cancel</button>
+                <button type="submit" class="btn btn-primary" ng-click="runBatch()">Run batch</button>
+            </div>
+        </form>
+    </div>
+</div>
